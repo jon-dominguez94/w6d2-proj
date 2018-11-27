@@ -14,9 +14,10 @@ class View {
   }
 
   makeMove($square) {
+    const mark = this.game.currentPlayer;
     $square.css("background", "white");
     this.game.playMove($square.data("pos"));
-    $square.html('x');
+    $square.html(mark);
   }
 
   setupBoard() {
