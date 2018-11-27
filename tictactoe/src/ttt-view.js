@@ -3,11 +3,20 @@ class View {
     this.game = game;
     this.$el = $el;
     this.setupBoard();
+    this.bindEvents();
   }
 
-  bindEvents() {}
+  bindEvents() {
+    $("ul").on("click", e => {
+      const $target = $(e.target);
+      this.makeMove($target);
+    });
+  }
 
-  makeMove($square) {}
+  makeMove($square) {
+    this.game.playMove($square.data("pos"));
+    $square.html('x');
+  }
 
   setupBoard() {
     const $ul = $('<ul>');
@@ -19,18 +28,6 @@ class View {
         }
       }
       this.$el.append($ul);
-    // debugger
-    // const $board = $('<table>');
-    // const $square = $("<td class='square'></td>");
-    // const $row = $("<tr>");
-    //   for (var i = 0; i < 3; i++) {
-    //     $row.append($square.html());
-    //   }
-    //   for (var j = 0; j < 3; j++) {
-    //     $board.append($row.html());
-    //   }
-    // this.$el.append($board.html());
-    // this.$el.append("<table><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr></table>");
   }
 }
 
