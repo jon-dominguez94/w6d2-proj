@@ -34,8 +34,8 @@
   height: 35px;
 }
 
-.yo_mama:hover {
-  background: #0c0;
+.yo-mama:hover {
+  border-color: #0c0;
 }
 
 .submit-bt {
