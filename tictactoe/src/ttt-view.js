@@ -40,8 +40,10 @@ class View {
       if($(e).children().length === 1){
         if ( $(e).children()[0].innerHTML === mark ) {
           $(e).css("background", "white");
+          $($(e).children()[0]).css("color", "red");
         } else {
           $(e).css("background", "green");
+          $($(e).children()[0]).css("color", "white");
         }
 
       }
