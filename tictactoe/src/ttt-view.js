@@ -20,6 +20,33 @@ class View {
     $square.css("background", "white");
     this.game.playMove($square.data("pos"));
     $square.append($prettymark);
+    if (this.game.isOver()) {
+      let $wins = $('<p class="winner">');
+      if (this.game.winner()) {
+        $wins.html(`${this.game.winner()} has won!`);
+      } else {
+        $wins.html('NO ONE WINS!');
+      }
+      this.$el.append($wins);
+      $("ul").off("click");
+      this.highlight();
+    }
+  }
+
+  highlight() {
+    const mark = this.game.currentPlayer.toUpperCase();
+    $('li').each((idx, e) => {
+      console.log($(e).children());
+      if($(e).children().length === 1){
+        if ( $(e).children()[0].innerHTML === mark ) {
+          $(e).css("background", "white");
+        } else {
+          $(e).css("background", "green");
+        }
+
+      }
+
+    });
   }
 
   setupBoard() {

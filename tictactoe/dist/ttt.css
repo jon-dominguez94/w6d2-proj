@@ -12,7 +12,15 @@ h1 {
 
 .ttt {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+
+.winner {
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
 }
 
 ul {
