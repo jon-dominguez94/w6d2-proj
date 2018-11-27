@@ -1,1 +1,58 @@
 /* PHASE 9: Forms */
+.post {
+  background: #eee;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.class-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.yo-mama-said {
+  height: 200px;
+  outline: green;
+}
+
+.yo-mama, .yo-mama-said {
+  display: block;
+  background: white;
+  border: 1px solid grey;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.class-post * {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.yo-mama {
+  height: 35px;
+}
+
+.yo_mama:hover {
+  background: #0c0;
+}
+
+.submit-bt {
+  background: #0c0;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px;
+}
+
+.submit-bt:hover {
+  background: blue;
+}
+
+.cancel {
+  color: red;
+}
