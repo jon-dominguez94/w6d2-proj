@@ -7,13 +7,14 @@ class View {
   }
 
   bindEvents() {
-    $("ul").on("click", e => {
+    $("ul").on("click", "li", e => {
       const $target = $(e.target);
       this.makeMove($target);
     });
   }
 
   makeMove($square) {
+    $square.css("background", "white");
     this.game.playMove($square.data("pos"));
     $square.html('x');
   }
