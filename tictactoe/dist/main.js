@@ -126,7 +126,7 @@ eval("\nconst MoveError = function (msg) { this.msg = msg; };\n\n// MoveError re
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../../sol/game.js */ \"../sol/game.js\");\n\n  $(() => {\n    // Your code here\n    const game = new Game();\n    const rootEl = $('.ttt');\n    new View(game, rootEl);\n\n  });\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../../sol/game.js */ \"../sol/game.js\");\n\n  $(() => {\n    // Your code here\n    const game = new Game();\n    const rootEl = $('.ttt');\n    new View(game, rootEl);\n  });\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -137,7 +137,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("class View {\n  constructor(game, $el) {\n    this.game = game;\n    this.$el = $el;\n    this.setupBoard();\n  }\n\n  bindEvents() {}\n\n  makeMove($square) {}\n\n  setupBoard() {\n    // const $ul = $('<ul>');\n    //   for (let rowIdx = 0; rowIdx < 3; rowIdx++) {\n    //     for (var colIdx = 0; colIdx < 3; colIdx++) {\n    //\n    //     }\n    //   }\n    // debugger\n    const $board = $('<table>');\n    const $square = $(\"<td class='square'></td>\");\n    const $row = $(\"<tr>\");\n      for (var i = 0; i < 3; i++) {\n        // let $ssq = $square;\n        $row.append($square);\n      }\n      for (var j = 0; j < 3; j++) {\n        $board.append($row);\n      }\n    this.$el.append($board);\n    // this.$el.append(\"<table><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr></table>\");\n  }\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
+eval("class View {\n  constructor(game, $el) {\n    this.game = game;\n    this.$el = $el;\n    this.setupBoard();\n  }\n\n  bindEvents() {}\n\n  makeMove($square) {}\n\n  setupBoard() {\n    const $ul = $('<ul>');\n      for (let rowIdx = 0; rowIdx < 3; rowIdx++) {\n        for (var colIdx = 0; colIdx < 3; colIdx++) {\n          let $li = $(\"<li>\");\n          $li.data(\"pos\", [rowIdx, colIdx]);\n          $ul.append($li);\n        }\n      }\n      this.$el.append($ul);\n    // debugger\n    // const $board = $('<table>');\n    // const $square = $(\"<td class='square'></td>\");\n    // const $row = $(\"<tr>\");\n    //   for (var i = 0; i < 3; i++) {\n    //     $row.append($square.html());\n    //   }\n    //   for (var j = 0; j < 3; j++) {\n    //     $board.append($row.html());\n    //   }\n    // this.$el.append($board.html());\n    // this.$el.append(\"<table><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr><tr><td class='square'></td><td class='square'></td><td class='square'></td><tr></table>\");\n  }\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
 
 /***/ })
 

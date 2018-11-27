@@ -6,5 +6,4 @@ const Game = require('../../sol/game.js');
     const game = new Game();
     const rootEl = $('.ttt');
     new View(game, rootEl);
-
   });
