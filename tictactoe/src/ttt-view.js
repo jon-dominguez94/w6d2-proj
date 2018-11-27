@@ -14,10 +14,12 @@ class View {
   }
 
   makeMove($square) {
-    const mark = this.game.currentPlayer;
+    const mark = this.game.currentPlayer.toUpperCase();
+    let $prettymark = $('<p class="mark">');
+    $prettymark.html(mark);
     $square.css("background", "white");
     this.game.playMove($square.data("pos"));
-    $square.html(mark);
+    $square.append($prettymark);
   }
 
   setupBoard() {
