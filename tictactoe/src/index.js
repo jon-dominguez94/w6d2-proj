@@ -4,6 +4,7 @@ const Game = require('../../sol/game.js');
   $(() => {
     // Your code here
     const game = new Game();
-    let $rootEl = $('#ttt');
-    
+    const rootEl = $('.ttt');
+    new View(game, rootEl);
+
   });
