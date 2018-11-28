@@ -24,12 +24,12 @@ class View {
       let $wins = $('<p class="winner">');
       if (this.game.winner()) {
         $wins.html(`${this.game.winner()} has won!`);
+        this.highlight();
       } else {
         $wins.html('NO ONE WINS!');
       }
       this.$el.append($wins);
       $("ul").off("click");
-      this.highlight();
     }
   }
 
