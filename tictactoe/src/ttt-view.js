@@ -42,12 +42,10 @@ class View {
           $(e).css("background", "white");
           $($(e).children()[0]).css("color", "red");
         } else {
-          $(e).css("background", "green");
+          $(e).css("background", "url('https://media1.tenor.com/images/d5c53252cd83693eb548c6cdc3eee55c/tenor.gif?itemid=4461926'");
           $($(e).children()[0]).css("color", "white");
         }
-
       }
-
     });
   }
 
